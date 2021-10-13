@@ -83,6 +83,12 @@ def flame():
         auto.dragRel(0, 30, duration=0.25)
         rect = qq_rect()
 
+    # Drag the QQ window to the specified position
+    while rect.x != 1570 or rect.y != 50:
+        rect = qq_rect()
+        auto.moveTo(rect.x + 15, rect.y + 15)
+        auto.dragTo(1570 + 15, 50 + 15, duration=0.25)
+
     # Move cursor to the first person's avatar
     auto.moveTo(rect.x + 40, rect.y + 220)
 
